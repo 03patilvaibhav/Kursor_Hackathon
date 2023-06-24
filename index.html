@@ -5,26 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Kursor</title>
+    <link rel="stylesheet" href="css/style.css">
    
-    <style media="screen" type="text/css">
-        .layer1_class { position: absolute; z-index: 1000;height:100vh;  left: 0px; background: #000;visibility: visible; }
-        .layer2_class { position: absolute; z-index: 2;  visibility: hidden; background: #000;}
-      </style>
-    <script>
-        function downLoad(){
-           
-              node = document.getElementById("layer1").style.visibility='hidden';
-              node = document.getElementById("layer2").style.visibility='visible';
-          
-        }
-      </script>
+   
 </head>
 <body onload="downLoad()">
-  <div id="layer1" class="layer1_class">
-    <canvas id="canvas">
+  <div id="loading" >
     
-  </canvas>
-<script src="js/pre-loader.js"></script>
 </div>
 <div id="layer2" class="layer2_class">
     <p>
@@ -45,6 +32,18 @@
     <div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/8WoJ7wXdB7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8WoJ7wXdB7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8WoJ7wXdB7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <script>
+        var load = document.getElementById("loading");
+        function download(){
+            load.style.display = 'none';
+        }
+    </script>
   
   
 
