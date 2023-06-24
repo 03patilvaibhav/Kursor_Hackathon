@@ -1,6 +1,6 @@
-body{
+/* body{
     background: #e5ebdf;
-  }
+  } */
   #gif{
     
    
@@ -38,3 +38,49 @@ body{
    
 
         
+body{
+    background-color: black;
+    color:#fff;
+}
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about-us{
+    display: flex;
+    /* color: aqua; */
+}
+.about-us-card{
+    background-color: #E9D5FF;
+    margin:10px;
+    border-radius: 10%;
+    padding: 20px;
+    color: black;
+    /* height: 200px; */
+}
+.about-us-card-icon{
+    background-color: black;
+    padding:5px;
+    border-radius: 10px;
+    color:#fff;
+    padding: 10px;
+    /* margin-top: 10px; */
+}
+.about-us-card:hover{
+    transition:500ms;
+    background-color: #9435EB;
+    margin:10px;
+    border-radius: 10%;
+    padding: 20px;
+    color: white;
+    /* height: 200px; */
+    .about-us-card-icon{
+        transition: 500ms;
+        background-color: white;
+        padding:5px;
+        border-radius: 10px;
+        color:#000;
+        padding: 10px;
+        /* margin-top: 10px; */
+    }
+}
+
