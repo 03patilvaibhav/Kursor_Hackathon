@@ -6,13 +6,15 @@
     
     <title>Kursor</title>
     <link rel="stylesheet" href="css/style.css">
-   
+
    
 </head>
-<body onload="downLoad()">
-  <div id="loading" >
+<body >
+  <div id="loading" class="loader hidden">
+    <img id="gif"src="assets/preloader_gif.gif" >
     
 </div>
+
 <div id="layer2" class="layer2_class">
     <p>
         lklklldd
@@ -39,11 +41,12 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/8WoJ7wXdB7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <script>
-        var load = document.getElementById("loading");
-        function download(){
-            load.style.display = 'none';
-        }
-    </script>
+        window.addEventListener("load",function(){
+            const loader=document.querySelector(".loader")
+            loader,className +="hidden";
+    
+        })
+       </script>
   
   
 
