@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
   
    margin: 0;
@@ -8,7 +8,7 @@
 
 body{
     background: #000;
-  }
+  } */
 /* -------Pre_lodercss------*/
   #gif{
     
@@ -215,3 +215,49 @@ header{
 }
 
         
+body{
+    background-color: black;
+    color:#fff;
+}
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about-us{
+    display: flex;
+    /* color: aqua; */
+}
+.about-us-card{
+    background-color: #E9D5FF;
+    margin:10px;
+    border-radius: 10%;
+    padding: 20px;
+    color: black;
+    /* height: 200px; */
+}
+.about-us-card-icon{
+    background-color: black;
+    padding:5px;
+    border-radius: 10px;
+    color:#fff;
+    padding: 10px;
+    /* margin-top: 10px; */
+}
+.about-us-card:hover{
+    transition:500ms;
+    background-color: #9435EB;
+    margin:10px;
+    border-radius: 10%;
+    padding: 20px;
+    color: white;
+    /* height: 200px; */
+    .about-us-card-icon{
+        transition: 500ms;
+        background-color: white;
+        padding:5px;
+        border-radius: 10px;
+        color:#000;
+        padding: 10px;
+        /* margin-top: 10px; */
+    }
+}
+
