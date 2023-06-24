@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  
+   margin: 0;
+   padding: 0;
+
+}
+
 body{
-    background: #e5ebdf;
+    background: #000;
   }
+/* -------Pre_lodercss------*/
   #gif{
     
    
@@ -26,7 +35,7 @@ body{
     width: 100px;
 }
 .loader.hidden{
-    animation: fadeout 10s;
+    animation: fadeout 12s;
     animation-fill-mode: forwards;
 }
 @keyframes fadeout{
@@ -35,6 +44,93 @@ body{
         visibility: hidden;
     }
 }
+/* -------Pre_lodercss------ end*/
+
+
+/* -------Navigation Header----- */
+.link_text{
+    font-family: "Poppins",sans-serif;
+    font-weight: 40;
+    font-size: 15px;
+    color: #9834eb;
+    text-decoration: none;
+}
+.logo_line{
+    font-family: "Poppins",sans-serif;
+    font-weight: 40;
+    font-size: 30px;
+    color: #9834eb;
+
+}
+.navlogo{
+    
+    cursor: pointer;
    
+    margin:2rem;
+    
+}
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a{
+    transition: all 0.1s ease 0s;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px ;
+}
+   
+
+/* -------Navigation header------ end*/
+.hero{
+    align-items: center;
+}
+.text01{
+    font-family: "Poppins",sans-serif;
+    font-weight: 40;
+    font-size: 48px;
+    color: #ffff;
+    text-align: center;
+}
+.text02{
+    font-family: "Poppins",sans-serif;
+    font-weight: 40;
+    font-size: 48px;
+    color: #ffff;
+    text-align: center;
+}
+
+.text03{
+    font-family: "Poppins",sans-serif;
+    font-weight: 40;
+    font-size: 20px;
+    color: #ffff;
+    text-align: center;
+}
+.text04{
+    font-family: "Poppins",sans-serif;
+    font-weight: 40;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+}
+.btn-01{
+    size: 5ch;
+    height: 50vh;
+    width:25%;
+    top: 50cm;
+}
 
         
