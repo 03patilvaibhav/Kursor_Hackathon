@@ -325,6 +325,7 @@ body{
   padding: 10vw;
   padding-left: 20vw;
 }
+
 .features_cards{
     display: flex;
 }
@@ -429,7 +430,7 @@ body{
 /* speacial feature word */
 .revealUp_1 {
   color:#9435EB ;
-  animation: move 1.2s ease-in infinite;
+  
  
 }
 .revealUp_2 {
