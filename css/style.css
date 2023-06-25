@@ -1,14 +1,15 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* *{ */
   
-   margin: 0;
-   padding: 0;
+   /* margin: 1vw; */
+   /* padding: 1vw; */
 
-}
+/* } */
 
 body{
     background: #000;
-  } */
+    margin: 5vw;
+  }
 /* -------Pre_lodercss------*/
   #gif{
     
@@ -269,6 +270,8 @@ body{
 # About Us
 --------------------------------------------------------------*/
 .about-us{
+    padding-left: 15vw;
+    padding-right: 15vw;
     display: flex;
     /* color: aqua; */
 }
@@ -306,4 +309,97 @@ body{
         /* margin-top: 10px; */
     }
 }
+/* --------------------------------------------------------- */
 
+/* features section start */
+
+/* ---------------------------------------------------------- */
+.features{
+  padding: 10vw;
+}
+.features_cards{
+    display: flex;
+}
+.feature_image img{
+    height: 350px;
+}
+.feature_image{
+    /* top: 10px; */
+    left: 5vh;
+    position:relative;
+    z-index: 0;
+}
+.feature_content{
+    top: 20px;
+    left: 3vh;
+    width: 500px;
+    background-color:#9435EB ;
+    position:relative;
+    padding: 10px;
+    z-index: 1;
+}
+.feature_image:hover{
+    z-index: 2;
+    transition:ease-in-out 500ms;
+    scale: 1.05;
+}
+/* End of Feature 1 */
+
+/* start of feature 2 */
+.features_cards_2{
+    display: flex;
+}
+.feature_image_2 img{
+    height: 300px;
+}
+.feature_image_2{
+    top: 150px;
+    left: 10vh;
+    position:relative;
+    z-index: 0;
+}
+.feature_content_2{
+    top: 76px;
+    left: 5vh;
+    width: 500px;
+    background-color:#9435EB ;
+    position:relative;
+    padding: 10px;
+    z-index: 1;
+}
+.feature_image_2:hover{
+    z-index: 2;
+    transition:ease-in-out 500ms;
+    scale: 1.05;
+}
+/* End of Feature 2 */
+
+/* start of feature 3 */
+.features_cards_3{
+    display: flex;
+}
+.feature_image_3 img{
+    height: 350px;
+}
+.feature_image_3{
+    top: 250px;
+    left: 10vh;
+    position:relative;
+    z-index: 0;
+}
+.feature_content_3{
+    top: 166px;
+    left: 0vh;
+    /* padding: 300vw; */
+    width: 500px;
+    background-color:#9435EB ;
+    position:relative;
+    padding: 10px;
+    z-index: 1;
+}
+.feature_image_3:hover{
+    z-index: 2;
+    transition:ease-in-out 500ms;
+    scale: 1.05;
+}
+/* End of Feature */
