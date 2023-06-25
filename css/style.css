@@ -52,7 +52,7 @@ body{
 .link_text{
     font-family: "Poppins",sans-serif;
     font-weight: 40;
-    font-size: 15px;
+    font-size: x-large;
     color: #9834eb;
     text-decoration: none;
 }
@@ -643,6 +643,10 @@ body {
 	font-size: 0.9em;
 	line-height: 2em;
 	letter-spacing: 0.05em;
+}
+.testimonial-container div{
+  text-align: center;
+  align-items: center;
 }
 .testimonial-container img {
 	display: block;
