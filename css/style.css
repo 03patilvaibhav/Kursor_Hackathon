@@ -868,3 +868,60 @@ footer {
 .wrapper-values{
   padding:20px;
 }
+/* --------------------------------------------------------- */
+
+/* Faq starts */
+
+/* ---------------------------------------------------------- */
+.faq{
+  position: relative;
+  align-items: center;
+  max-width: 980px;
+  left: 50vh;
+  
+
+}
+
+.faq_header{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px ;
+  
+}
+.faq_header-title{
+  font-family: "Poppins","sans-serif";
+  font-size: 40px;
+  color: #9435EB;
+  margin-bottom: 30px;
+  
+  
+  
+}
+.faq__panel{
+  padding: 7px 21px;
+  margin-bottom: 24px;
+  border: 1px solid #777e91;
+  border-radius: 7px;
+}
+.faq__label{
+  padding-block: 7px;
+  color: #f4f5f6;
+  cursor: pointer;
+  font-family: "Poppins","sans-serif";
+  font-size: 30px;
+}
+.faq__panel-answer{
+  color: #777e91;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  font-family: "Poppins","sans-serif";
+  font-size: 20px;
+}
+
+
+/* --------------------------------------------------------- */
+
+/* Faq ends */
+
+/* ---------------------------------------------------------- */
