@@ -8,7 +8,7 @@
 
 body{
     background: #000;
-    margin: 5vw;
+    margin: 0;
   }
 /* -------Pre_lodercss------*/
   #gif{
@@ -340,17 +340,17 @@ body{
     padding: 10px;
     z-index: 1;
 }
-.feature_image:hover::before{
+ .feature_image:hover{
     z-index: 2;
     transition:ease-in-out 500ms;
     scale: 1.05;
 }
-.feature_image:hover::before,
+/*.feature_image:hover::before,
 .feature_image::after{
     z-index: 0;
     transition:ease-in-out 500ms;
     scale: 1;
-}
+} */
 /* End of Feature */
 /* End of Feature 1 */
 
@@ -427,6 +427,7 @@ body{
   left:100vh;
   position:relative;
   top: 3vh;
+  width: 200px;
 }
 .revealUp_3 {
   color:#9435EB ;
@@ -436,6 +437,9 @@ body{
 .spacer {
   height: 50vh;
   background-color: #000;
+}
+.features_div{
+  align-items: center;
 }
 
 /*--------------------------------------------------------------
@@ -520,6 +524,7 @@ body{
 	max-width: 41em;
 	min-height: 26em;
 	display: none;
+  padding-bottom: 50px;
 }
 .img-con {
 	position: absolute;
@@ -529,7 +534,7 @@ body{
 	width: 1px;
 }
 .wrapper {
-	background-color: #ffffff;
+	background-color: #2D2E37;
 	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -546,7 +551,7 @@ body{
 	padding: 1.8em 1.2em;
 }
 .testimonial-container p {
-	color: #8c8c90;
+	color: #fff;
 	text-align: center;
 	font-size: 0.9em;
 	line-height: 2em;
@@ -559,7 +564,7 @@ body{
 	width: 4.4em;
 }
 .testimonial-container h3 {
-	color: #2d3d67;
+	color: #fff;
 	font-size: 1em;
 	text-align: center;
 }
@@ -572,14 +577,14 @@ body{
 }
 .wrapper button {
 	font-size: 1.8em;
-	color: #0a69ed;
+	color: #2D2E37;
 	height: 2.2em;
 	width: 2.2em;
 	position: absolute;
 	margin: auto;
 	top: 0;
 	bottom: 0;
-	background-color: #ffffff;
+	background-color: #bcc4da;
 	border: none;
 	border-radius: 50%;
 	-webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
@@ -608,21 +613,46 @@ button#prev {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #344341;
+  background: #2D2E37;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
 }
 #footer .footer-top .footer-info {
+  color:#fff;
   margin-bottom: 30px;
+}
+.footer-info{
+  /* padding-right: 400px; */
+  position: relative;
+  right: 40vh;
 }
 footer {
   display: block;
 }
+.footer_symbol{
+  display:flex;
+}
+.footer_symbol h1{
+  padding-left: 10px;
+  background-image: linear-gradient(to right, #886DF4, #9435EB);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.footer_symbol img{
+  padding-top: 10px;
+  width: 50px;
+  height: 50px;
+}
+
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
-  width: 100%;
+  /* width: 100%; */
   padding-right: calc(var(--bs-gutter-x) * .5);
   padding-left: calc(var(--bs-gutter-x) * .5);
   margin-right: auto;
@@ -642,4 +672,75 @@ footer {
 }
 .d-flex {
   display: flex!important;
+}
+.special_words{
+  color:#9435EB
+}
+.row p{
+  color: #bcc4da;
+  width: 200px;
+  font-size: medium;
+}
+.new_icons{
+  padding: 10px;
+  color:#a0a0a0
+}
+.new_icons:hover{
+  /* padding: 10px; */
+  scale: 1.5;
+  color:#9435EB
+}
+.footer_privacy{
+  position: relative;
+  right: 10vh;
+}
+.footer_privacy a{
+  font-size: large;
+  text-decoration: none ;
+  color: #a0a0a0;
+}
+.footer_privacy a:hover{
+  color:#9435EB;
+}
+.footer-links{
+  position: relative;
+  left:20vh;
+
+}
+.footer-links-list{
+  list-style: none;
+}
+.footer-links-list a{
+  font-size: large;
+  text-decoration: none ;
+  color: #a0a0a0;
+}
+.footer-links-list a:hover{
+  color:#9435EB;
+}
+.footer-links-list li{
+  padding: 5px;
+}
+.copyright{
+  text-align: center;
+  font-size: large;
+}
+.copyright-kursor{
+  color:#9435EB
+}
+.heading h1 {
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+  background-image: linear-gradient(to right, #3d15db, #9435EB);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.wrapper-values{
+  padding:20px;
 }
