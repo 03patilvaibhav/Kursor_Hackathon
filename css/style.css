@@ -144,7 +144,7 @@ body{
     }
   }
 .navlogo{
-    
+    width: 70px;
     cursor: pointer;
    
     margin:2rem;
