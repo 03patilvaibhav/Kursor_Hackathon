@@ -179,8 +179,8 @@ header{
 /* -------Hero Section------ */
 .hero{
     align-items: center;
-    justify-content: space-between;
-    padding-top: 7%;
+ 
+    
 }
 .text01{
     font-family: "Poppins",sans-serif;
@@ -403,3 +403,192 @@ body{
     scale: 1.05;
 }
 /* End of Feature */
+
+
+/*--------------------------------------------------------------
+# box-feature
+--------------------------------------------------------------*/
+.box_feature{
+ display: flex; 
+ margin: 4rem;
+}
+
+/*--------------------------------------------------------------
+# box-feature ends
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Testomonials
+--------------------------------------------------------------*/
+#loader {
+	background-color: #ffffff;
+	height: 15em;
+	width: 15em;
+	position: relative;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+	border-radius: 5px;
+}
+#loader:after {
+	content: "";
+	position: absolute;
+	height: 11em;
+	width: 11em;
+	border: 0.9em solid #a0a0a0;
+	border-top-color: #4249ed;
+	border-radius: 50%;
+	-webkit-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+#box {
+	position: relative;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	top: 25vh;
+	left: 50%;
+	width: 80vw;
+	max-width: 41em;
+	min-height: 26em;
+	display: none;
+}
+.img-con {
+	position: absolute;
+}
+.img-con img {
+	height: 1px;
+	width: 1px;
+}
+.wrapper {
+	background-color: #ffffff;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	border-radius: 0.6em;
+	-webkit-box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+	box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+}
+.testimonial-container {
+	width: 85%;
+	height: 100%;
+	position: relative;
+	margin: auto;
+	padding: 1.8em 1.2em;
+}
+.testimonial-container p {
+	color: #8c8c90;
+	text-align: center;
+	font-size: 0.9em;
+	line-height: 2em;
+	letter-spacing: 0.05em;
+}
+.testimonial-container img {
+	display: block;
+	margin: 1.8em auto 1.25em auto;
+	border-radius: 50%;
+	width: 4.4em;
+}
+.testimonial-container h3 {
+	color: #2d3d67;
+	font-size: 1em;
+	text-align: center;
+}
+.testimonial-container h6 {
+	color: #bcc4da;
+	font-size: 0.9em;
+	letter-spacing: 0.03em;
+	font-weight: 400;
+	text-align: center;
+}
+.wrapper button {
+	font-size: 1.8em;
+	color: #0a69ed;
+	height: 2.2em;
+	width: 2.2em;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+button#next {
+	right: -1.1em;
+}
+button#prev {
+	left: -1.1em;
+}
+
+@media screen and (max-width: 650px) {
+	.wrapper {
+		font-size: 14px;
+	}
+}
+
+
+/*--------------------------------------------------------------
+# Testomonials End
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #344341;
+  padding: 0 0 30px 0;
+  color: #fff;
+  font-size: 14px;
+}
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+footer {
+  display: block;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.justify-content-center {
+  justify-content: center!important;
+}
+.d-flex {
+  display: flex!important;
+}

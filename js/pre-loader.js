@@ -1,167 +1,55 @@
-
-var txt = "Kursor";
-var txtH = 100;
-var font = "sans-serif";
-var bg = "#000";
-var rayColor1 = "#9834eb";
-var rayColor2 = "#9834eb";
-var fade = 1000;
-
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var cw = canvas.width = window.innerWidth;
-var ch = canvas.height = window.innerHeight;
-
-var w2 = cw/2;
-var h2 = ch/2;
-var pi = Math.PI;
-var pi2 = pi*.5;
-
-var txtCanvas = document.createElement("canvas");
-var txtCtx = txtCanvas.getContext("2d");
-txtCtx.font = txtH + "px " + font;
-txtCtx.textBaseline = "middle";
-var txtW = Math.floor(txtCtx.measureText(txt).width);
-txtCanvas.width = txtW;
-txtCanvas.height = txtH*1.5;
-
-var gradient = ctx.createRadialGradient(w2, h2, 0, w2, h2, txtW);
-gradient.addColorStop(0, rayColor2);
-gradient.addColorStop(1, rayColor1);
-ctx.strokeStyle = gradient;
-
-txtCtx.fillStyle = gradient;
-txtCtx.font = txtH + "px " + font;
-txtCtx.textBaseline = "middle";
-txtCtx.fillText(txt,0,txtH*.5);
-
-//dirty adjust for descends
-txtH *= 1.5;
-
-var bufferCanvas = document.createElement("canvas");
-bufferCanvas.width = txtW;
-bufferCanvas.height = txtH;
-var buffer = bufferCanvas.getContext("2d");
-
-//text start position
-var sx = (cw-txtW)*0.5
-var sy = (ch-txtH)*0.5
-
-////generate data
-var rays = [];
-var txtData = txtCtx.getImageData(0,0,txtW,txtH);
-for (var i = 0; i < txtData.data.length; i+=4) {
-  var ii = i/4;
-  var row = Math.floor(ii/txtW)
-  var col = ii%txtW
-  var alpha = txtData.data[i+3]
-  if(alpha !== 0){
-    var c = "rgba("
-    c += [txtData.data[i],txtData.data[i+1],txtData.data[i+2], alpha/255 ] 
-    c += ")";
-    rays.push(new Ray(Math.floor(ii/txtW), ii%txtW, c));  
-  }
+window.addEventListener("load", function () {
+	document.getElementById("loader").style.display = "none";
+	document.getElementById("box").style.display = "block";
+});
+const testimonials = [
+	{
+		name: "Eva Sawyer",
+		job: "CEO, Fashworks",
+		image: "https://i.postimg.cc/gJDkZrNn/profile-image-1.png",
+		testimonial:
+			"Neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur"
+	},
+	{
+		name: "Katey Topaz",
+		job: "Developer, TechCrew",
+		image: "https://i.postimg.cc/8kZzkJ7Y/profile-image-2.png",
+		testimonial:
+			"Elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet nulla"
+	},
+	{
+		name: "Jae Robin",
+		job: "UI Designer, Affinity Agency",
+		image: "https://i.postimg.cc/90gmLK32/profile-image-3.png",
+		testimonial:
+			"Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis"
+	},
+	{
+		name: "Nicola Blakely",
+		job: "CEO,Zeal Wheels",
+		image: "https://i.postimg.cc/6qp6Lwmz/profile-image-4.png",
+		testimonial:
+			"Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit"
+	}
+];
+let i = 0; // current slide
+let j = testimonials.length; // total slides
+let testimonialContainer = document.getElementById("testimonial-container");
+function next() {
+	i = (j + i + 1) % j;
+	displayTestimonial();
 }
 
-var current = 1;
-//start animation
-tick();
-
-function tick() {
-  ctx.clearRect(0,0,cw,ch)
-  ctx.drawImage(bufferCanvas, 0, 0, current, txtH, sx, sy, current, txtH)
-  ctx.save()
-  ctx.globalAlpha = 0.1;
-  ctx.globalCompositeOperation = "lighter";
-  if(drawRays(current)){
-    current++;
-    current = Math.min(current, txtW)
-    window.requestAnimationFrame(tick)  
-  }else{
-    fadeOut()
-  }
-  ctx.restore()
+function prev() {
+	i = (j + i - 1) % j;
+	displayTestimonial();
 }
-
-function fadeOut(){
-  ctx.clearRect(0,0,cw,ch)
-  ctx.globalAlpha *= 0.001;
-  ctx.drawImage(bufferCanvas, 0, 0, current, txtH, sx, sy, current, txtH)
-  if(ctx.globalAlpha > .01){
-   window.requestAnimationFrame(fadeOut) 
-  }else{
-    window.setTimeout(restart, 0.1)
-  }
-}
-function restart(){
-  for(var i = 0; i < rays.length; i++){
-    rays[i].reset()
-  }
-  ctx.globalAlpha = 1
-  buffer.clearRect(0,0,txtW,txtH)
-  current = 1;
-  tick();
-}
-function drawRays(c){
-  var count = 0;
-  ctx.beginPath()
-  for(var i = 0; i < rays.length; i++){
-    var ray = rays[i];
-    if(ray.col < c){
-      count += ray.draw()
-    }
-  }
-  ctx.stroke()
-  return count !== rays.length;
-}
-
-function filterRays(r){
-  return Boolean(r);
-}
-
-function Ray(row, col, f){
-  this.col = col;
-  this.row = row;
-  
-  var xp = sx + col;
-  var yp = sy + row;
-  var fill = f;
-  
-  var ath = (txtH/1.5) 
-  
-  var a = pi2 * (this.row - ath*.5) / ath;
-  if(a === 0){
-    a = (Math.random() - .5) * pi2;
-  }
-  var da = .02 * Math.sign(a);
-  da += (Math.random() - .5) * .005;
-  var l = 0;
-  var dl = Math.random()*2 + 2;
-  
-  var buffered = false;
-  this.reset = function(){
-    a = pi2 * (this.row - ath*.5) / ath;
-    if(a === 0){
-      a = -pi2*.5;
-    }
-    l = 0;
-    buffered = false
-  }
-  this.draw = function(){
-    if(l < 0){
-      if(!buffered){
-        buffer.fillStyle = fill;
-        buffer.fillRect(this.col, this.row, 1, 1);
-        buffered = true
-      }
-      return 1;
-    }else{
-      ctx.moveTo(xp, yp)
-      ctx.lineTo(xp + Math.cos(a) * l, yp + Math.sin(a) * l);
-      a += da;
-      l += Math.cos(a)*dl;
-      return 0;
-    }
-  }
-}
-
+let displayTestimonial = () => {
+	testimonialContainer.innerHTML = `
+        <p>${testimonials[i].testimonial}</p>
+         <img src=${testimonials[i].image}></img>
+        <h3>${testimonials[i].name}</h3>
+        <h6>${testimonials[i].job}</h6>
+        `;
+};
+window.onload = displayTestimonial;
