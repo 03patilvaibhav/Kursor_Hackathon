@@ -759,7 +759,7 @@ footer {
 }
 .footer_symbol h1{
   padding-left: 10px;
-  background-image: linear-gradient(to right, #886DF4, #9435EB);
+  background-image: linear-gradient(to right, #886DF4, #cb4bdd);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   /* -webkit-background-clip: text; */
@@ -856,7 +856,7 @@ footer {
   text-align: center;
   font-size: 40px;
   padding: 10px;
-  background-image: linear-gradient(to right, #3d15db, #9435EB);
+  background-image: linear-gradient(to right, #886DF4, #cb4bdd);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   /* -webkit-background-clip: text; */
