@@ -188,6 +188,7 @@ header{
     font-size: 48px;
     color: #ffff;
     text-align: center;
+    margin-bottom: 0rem;
    
     
 }
@@ -198,6 +199,8 @@ header{
     color: #ffff;
     text-align: center;
     text-justify: auto;
+    
+
     
 }
 
@@ -259,6 +262,10 @@ button {
   transform: translateY(3px);
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
 }
+.btn-text{
+  text-decoration: none;
+  color: #ffffff;
+}
 /* -------Hero Section------ end*/
 
         
@@ -273,7 +280,7 @@ body{
     padding-left: 15vw;
     padding-right: 15vw;
     display: flex;
-    /* color: aqua; */
+ 
 }
 .about-us-card{
     background-color: #E9D5FF;
@@ -552,6 +559,43 @@ button#prev {
 /*--------------------------------------------------------------
 # Testomonials End
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Privacy Policy
+--------------------------------------------------------------*/
+.text-center{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48rem;
+  padding-bottom: 3rem;
+}
+.lineee{
+  font-size: 48px;
+  font-weight: 400;
+
+}
+.privacy_content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.privacy_wrapper {
+  border: 2px solid black;
+  padding: 40px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+}
+
+.privacy_box {
+  border: 1px solid rgb(255, 255, 255);
+  text-align: justify;
+  padding: 15px;
+  margin: 10px;
+}
 
 /*--------------------------------------------------------------
 # Footer
