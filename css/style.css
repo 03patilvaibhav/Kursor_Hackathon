@@ -174,8 +174,12 @@ header{
    
 
 /* -------Navigation header------ end*/
+
+/* -------Hero Section------ */
 .hero{
     align-items: center;
+    justify-content: space-between;
+    padding-top: 7%;
 }
 .text01{
     font-family: "Poppins",sans-serif;
@@ -183,6 +187,8 @@ header{
     font-size: 48px;
     color: #ffff;
     text-align: center;
+   
+    
 }
 .text02{
     font-family: "Poppins",sans-serif;
@@ -190,6 +196,7 @@ header{
     font-size: 48px;
     color: #ffff;
     text-align: center;
+    text-justify: auto;
     
 }
 
@@ -207,12 +214,51 @@ header{
     color: #fff;
     text-align: center;
 }
-.btn-01{
-    size: 5ch;
-    height: 50vh;
-    width:25%;
-    top: 50cm;
+.btn{
+  display: flex;
+  justify-content: center;
 }
+button {
+  margin: 2rem;
+  
+}
+.btn-3d {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4d4dff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: transform 0.2s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.btn-3d:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: inherit;
+  z-index: -1;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-3d:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-3d:hover:before {
+  transform: translateY(3px);
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+/* -------Hero Section------ end*/
 
         
 body{
